@@ -1,0 +1,219 @@
+@import "./vendor/normalize";
+
+// стили для модального окна
+@import "../../node_modules/graph-modal/dist/graph-modal.min";
+
+// стили для range слайдера
+@import '../../node_modules/nouislider/dist/nouislider';
+
+#dateslider{
+  height: 10px;
+  .noUi-connect {
+    background: #556583;
+  }
+  .noUi-connects{
+    background: #E1E1E4;
+    border:none;
+  }
+  .noUi-handle {
+    height: 26px;
+    width: 26px;
+    top: -10px;
+    right: -18px; /* half the width */
+    border-radius: 100%;
+    &::after{
+      display: none;
+    }
+    &::before{
+      display: none;
+    }
+  }
+  .noUi-tooltip {
+    border:none;
+    background: transparent ;
+  }
+
+}
+
+.noUi-horizontal .noUi-tooltip{
+  bottom:-150%;
+}
+
+#html5 {
+  height: 10px;
+  .noUi-connect {
+    background: #556583;
+  }
+  .noUi-connects{
+    background: #E1E1E4;
+    border:none;
+  }
+  .noUi-handle {
+    height: 26px;
+    width: 26px;
+    top: -10px;
+    right: -18px; /* half the width */
+    border-radius: 100%;
+    &::after{
+      display: none;
+    }
+    &::before{
+      display: none;
+    }
+  }
+}
+
+// стили для табов
+@import "../../node_modules/graph-tabs/dist/graph-tabs.min";
+.tabs__nav-btn{
+  width: 80px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:9px 9px 0 0;
+  transition: all .3s linear;
+  &--active{
+  background: #323232 !important;
+  }
+  &:focus{
+    background: #323232 !important;
+  }
+  &:hover{
+    background: #323232 !important;
+  }
+}
+
+.tabs__nav{
+  border-bottom: 1px #323232 solid;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center  ;
+}
+// .tabs__nav-item{
+//   margin-left: 15px;
+//   &:first-child{
+//     margin-left: 0;
+//   }
+// }
+// стили для библиотеки aos
+// @import "../../node_modules/aos/dist/aos";
+
+// // стили для свайпера
+@import "../../node_modules/swiper/swiper-bundle.min";
+
+.swiper-wrapper-main{
+  width: 100%;
+  max-width: 800px;
+}
+.swaper-wrapper{
+  width: 100%;
+}
+.swiper-wrapper-audio{
+  width: 100% !important;
+  max-width: 400px !important;
+}
+.swiper-button-prev-main{
+  left: 0;
+  top: auto ;
+  bottom: 0;
+  z-index: 55;
+  color: #323232;
+
+}
+.swiper-button-next-main{
+  right: 0;
+  top: auto ;
+  bottom: -0px;
+  z-index: 55;
+  color: #323232;
+
+}
+
+.swiper-slide-audio{
+  width: 100%;
+  max-width: 800px;
+}
+// #article-next {
+//   background-image: url(./next.svg);
+//   background-repeat: no-repeat;
+//   background-size: 100% auto;
+//   background-position: center;
+// }
+
+#article-next::after {
+  content: '→';
+  color:#323232;
+  font-weight: 500;
+
+  // display: none;
+}
+#article-prev::after {
+  content: '←';
+  color:#323232;
+  font-weight: 500;
+
+  // display: none;
+}
+@media (min-width:1200px) {
+  .swiper-button-prev-main{
+    left: 105px;
+    top: 50%;
+    bottom: auto;
+    z-index: 55;
+  }
+  .swiper-button-next-main{
+    right: 105px;
+    top: 50%;
+    bottom: auto;
+    z-index: 55;
+  }
+}
+// стили для скролла simplebar
+// @import "../../node_modules/simplebar/dist/simplebar.min";
+
+//Стили для тултипов
+@import '../../node_modules/tippy.js/dist/tippy'; // optional for styling
+@import '../../node_modules/tippy.js/themes/light';
+.tippy-box[data-theme~='qual'] {
+  background-color: #FFFFFF;
+  color: #9799A5;
+  font-style: italic;
+  font-size: 18px;
+  border: 1px solid #323232
+}
+.tippy-box[data-theme~='green'] {
+  background-color: #FFFFFF;
+  color: #639942;
+  font-style: italic;
+  font-size: 18px;
+  border: 1px solid #B3DF98;
+  span{
+    color: #9799A5;
+  }
+}
+.tippy-box[data-theme~='yellow'] {
+  background-color: #FFFFFF;
+  color: #636363;
+  font-style: italic;
+  font-size: 18px;
+  border: 1px solid #FDE68A;
+  span{
+    color: #9799A5;
+  }
+}
+
+
+// Стили для календаря
+.dayname{
+  width: 30px;
+  height: 40px;
+}
+.day {
+  width: 30px;
+  height: 40px;
+}
+.container .inline{
+  box-shadow: none;
+  background:red;
+}
